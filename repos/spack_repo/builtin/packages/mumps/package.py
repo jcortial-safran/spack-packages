@@ -47,7 +47,7 @@ class Mumps(Package):
     variant(
         "mpi_in_place",
         default=True,
-        description="Enable MPI_IN_PLACE optimization (Disabling it may fix some crashes)",
+        description="Enable MPI_IN_PLACE optimization (Not supported by some MPI environments)",
         when="@5.6.2: +mpi",
     )
     variant("scotch", default=False, description="Activate Scotch as a possible ordering library")
