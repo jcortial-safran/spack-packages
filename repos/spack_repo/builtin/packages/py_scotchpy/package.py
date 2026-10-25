@@ -61,3 +61,6 @@ class PyScotchpy(PythonPackage):
 
     def setup_build_environment(self, env: EnvironmentModifications) -> None:
         env.set("SCOTCHPY_SCOTCH", self.spec["scotch"].prefix.lib)
+
+    def setup_run_environment(self, env: EnvironmentModifications) -> None:
+        env.set("SCOTCHPY_SCOTCH", self.spec["scotch"].prefix.lib)
